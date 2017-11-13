@@ -6,9 +6,10 @@ nav {
   align-items: center;
   padding-left: 2em;
   padding-right: 2em;
-  font-size: 1.5em;
+  font-size: 1em;
 }
 .logo {
   width: 80x;
   height: 80px;
+  padding-right: 10px;
 }
