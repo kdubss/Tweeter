@@ -4,8 +4,6 @@ nav {
   color: #e8fdff;
   display: flex;
   align-items: center;
-}
-.logo {
-  margin-left: 30px;
-  display: flex;
+  padding-left: 2em;
+  padding-right: 2em;
 }
