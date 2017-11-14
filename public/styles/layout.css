@@ -31,3 +31,7 @@ main.container {
   margin-top: 140px;
   width: 450px;
 }
+
+h2 {
+  border-bottom: 1px solid black;
+}
