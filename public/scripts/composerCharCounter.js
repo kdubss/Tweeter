@@ -1,0 +1,1 @@
+alert("Composer character counter JS file loaded!");
