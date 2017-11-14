@@ -1,0 +1,23 @@
+section.new-tweet {
+  background-color: #eee;
+  border-radius: 4px;
+  border: 1px solid #A9A9A9;
+  width: 500px;
+  height: 180px;
+  margin: auto;
+}
+textarea {
+  width: 90%;
+  margin: 0px 0px 0px 25px;
+}
+input.submit {
+  margin-left: 25px;
+}
+span.counter {
+  margin-left: 365px;
+  font-style: italic;
+}
+h2 {
+  margin-left: 25px;
+  margin-right: 25px;
+}
