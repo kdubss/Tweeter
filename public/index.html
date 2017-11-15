@@ -4,62 +4,77 @@
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
+   <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
-    <!-- Added css link (from fonts.google.com) -->
-    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,700,700i" rel="stylesheet">
 
-    <!-- App CSS -->
+   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
+
+   <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/styles/nav.css" type = "text/css" />
-    <link rel="stylesheet" href="/styles/new-tweet.css" type = "text/css" />
 
-    <!-- External JS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css"/>
+
+   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />"
+
+   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
+   <link rel="stylesheet" href="/styles/alltweets.css" type="text/css" />
+
+   <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
-    <script type="text/javascript" src="/scripts/composerCharCounter.js" />
 
-    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
+   <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
   </head>
 
-  <body>
 
-    <!-- Top nav bar (fixed) -->
+
+
+ <body>
+   <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
     </nav>
 
-    <!-- Page-specific (main) content here -->
+   <!-- Page-specific (main) content here -->
     <main class="container">
+        <section class="new-tweet">
+          <h2>Compose Tweet</h2>
+            <form METHOD="POST" ACTION="/tweets">
+              <textarea name="text" placeholder="What are you humming about?"></textarea>
+                <input type="submit" value="Tweet">
+                   <span class="counter">140</span>
+            </form>
+        </section>
+        <section id="all-tweet-data">
+          <article class="tweetPlz">
+             <header class="headerbox">
+                <img src="/images/bird.png" height="42" width="42" />
+                 <h1>sunnyMan</h1>
+                 <h2>@Mr.sun</h2>
+             </header>
+                   <p class="text">
+                    little tweet here
+                   </p>
 
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form action="/tweets" method="POST">
-          <textarea class="textarea" name="text" placeholder="What are you humming about today?"></textarea>
-          <input class="submit" type="submit" value="Tweet">
-          <span class="counter">140</span>
-        </form>
-      </section>
+                   <footer>
+                    <p>
+                    10 days ago
+                     </p>
+                     <div class="icons">
+                        <i class="fa fa-flag" aria-hidden="true"></i>
+                        <i class="fa fa-retweet" aria-hidden="true"></i>
+                        <i class="fa fa-heart" aria-hidden="true"></i>
+                    </div>
+                  </footer>
 
-      <section id="tweet-list">
-        <article class="tweet">
-          <header>
-            Kang Wang
-          </header>
-          <div class="tweet-body">
-            <!-- - Tweet,
-              - Avatar
-              - Handle
-              - Name -->
-          </div>
-          <footer>
-            10 days ago
-          </footer>
-        </article>
-      </section>
+          </article> 
 
+             </section>
     </main>
 
-  </body>
+ </body>
 </html>
