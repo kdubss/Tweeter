@@ -24,15 +24,14 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-
 main.container {
   background-color: white;
   margin: 0 auto;
   width: 600px;
-  height: 500px;
+  height: 800px;
   padding-top: 40px;
+  padding: 40px;
 }
-
-h2 {
+.compose-title h2 {
   border-bottom: 1px solid black;
 }
