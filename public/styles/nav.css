@@ -1,41 +1,24 @@
-nav {
-  font-size: 200%;
-  height: 100px;
-  background-color: #00a087 ;
-  color: #e8fdff ;
+#nav-bar {
+  position: fixed;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background-color: turquoise;
+  padding: 0 2em;
+  display: flex;
+  z-index: 1;
+}
+.logo {
+  width: 60px;
+  height: 60px;
+}
+.branding {
   display: flex;
   align-items: center;
- 
- }
- #nav-bar .logo {
-  float: left;
-  margin-left: 30px;
-  display: flex;
-  height:80px;
-  width:80px;
-  background-color: #00a087 ;
- 
- }
- #nav-bar .header {
-   background-color: #00a087 ;
-   color: #e8fdff ;
-   height: 100%;
-   left: 10px;
-   line-height: 400%
- }
- #nav-bar #compose-button {
-   text-justify: right;
-   position: relative;
-   width: 160px;
-   height: 75px;
-
-   margin-left: auto;
-   margin-right: 40px;
-   opacity: 0.7;
-   background-color: #a9a9a9;
-   border: 3px solid #eee;
-   border-radius: 5px;
- }
- #nav-bar #compose-button:hover {
-   opacity: 1.0;
- }
+  font-size: 2em;
+}
+#compose-button {
+  margin: 10px 0;
+}
