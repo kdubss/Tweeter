@@ -1,4 +1,6 @@
-debuggingJavaScript/
-node_modules/
-.env
+karan_index.html
+karan_newTweet.css
+karansCode/
+public/scripts/composer-char-counter.js
+*~
 .DS_Store
