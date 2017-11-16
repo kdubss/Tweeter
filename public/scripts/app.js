@@ -84,7 +84,7 @@ $( function () {
     var $eachTweet;
     for (var tweet of tweetData) {
       $eachTweet = createTweetElement(tweet);
-      $("#all-tweet-data").append($eachTweet);
+      $("#all-tweet-data").prepend($eachTweet);
     }
     // $("#all-tweet-data").append($eachTweet);
   }
