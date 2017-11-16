@@ -1,6 +1,10 @@
 karan_index.html
 karan_newTweet.css
 karansCode/
+debuggingJavaScript/
+node_modules/
+server/lib/in-memory-db.js
+server/lib/util/simulate-delay.js
 public/scripts/composer-char-counter.js
 *~
 .DS_Store
