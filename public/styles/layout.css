@@ -15,23 +15,19 @@ html {
  */
 
 body {
+  margin-top: 80px;
   color: #244751;
   background-color: #eee;
   font-family: 'Crimson Text', sans-serif;
-  font-size: 16;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-main.container {
-  background-color: white;
-  margin: 0 auto;
-  width: 600px;
-  height: 800px;
-  padding-top: 40px;
-  padding: 40px;
-}
-.compose-title h2 {
-  border-bottom: 1px solid black;
-}
+ .container {
+   width: 450px;
+   margin: 0 auto;
+   padding: 2em;
+   background-color: white;
+   position: relative;
+ }
