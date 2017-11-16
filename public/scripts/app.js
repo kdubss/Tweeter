@@ -90,11 +90,32 @@ $( function () {
   }
     // renderTweet(tweetData);
 
-  
-  
+  function loadTweet() {
+    $.ajax({
+      method: "GET",
+      url: "/tweets",
+      success: function(data) {
+        console.log("Success: ", data);
+        renderTweet(data);
+      }
+    });
+  };
+  loadTweet();
+
+  function isValid(formData) {
+
+  }
+
   $("form").submit(function(event) {
     event.preventDefault();
     var formData = $(this).serialize();
+
+    if (!isValid(formData)) return;
+
+    $.post('/tweets', formData)
+      .success(loadTweet)
+      .error(err => alert(err));
+
   });
 
 });
