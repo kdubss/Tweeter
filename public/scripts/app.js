@@ -131,6 +131,12 @@ $( function () {
     $.post('/tweets', formData)
       .success(loadTweet)
   })
+
+  $(".new-tweet").hide();
+    $("#compose-button").click(function(event) {
+      $(".new-tweet").toggle();
+      $("textarea").focus();
+    })
 })
 // var $tweet = createTweetElement(tweetData);
 
