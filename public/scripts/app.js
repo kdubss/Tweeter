@@ -103,7 +103,14 @@ $( function () {
   loadTweet();
 
   function isValid(formData) {
-
+    if (formData.length === "" || formData.length === null) {
+      return false;
+    } else if (formData.length === 140) {
+      alert("Your tweet can not be longer than 140 characters!");
+      return false;
+    } else {
+      return true;
+    }
   }
 
   $("form").submit(function(event) {
