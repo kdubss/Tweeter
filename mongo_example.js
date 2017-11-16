@@ -1,6 +1,6 @@
 "use strict"
 
-const MongoClient = require("mongodb").MongoClient;
+const {MongoClient} = require("mongodb");
 const MONGO_URI = "mongodb://localhost:27017/tweeter";
 
 MongoClient.connect(MONGO_URI, (err, db) => {
@@ -22,7 +22,23 @@ MongoClient.connect(MONGO_URI, (err, db) => {
   //
   // Another way to say: "This is an 'entry-point' for a database application!"
 
+  function getTweets(callback) {
+    db.collection("tweets").find().toArray((err, tweets) => {
+      if (err) {
+        return callback(err);
+      }
+      callback(null, tweets);
+    });
+  }
 
-  // At the end, close the application:
-  db.close();
-})  
+  getTweets((err, tweets) => {
+    if (err) throw err; 
+
+    console.log("Logging each tweet:\n");
+    for (let tweet of tweets) {
+      console.log(tweet);
+    }
+    db.close();
+  });
+
+});  
