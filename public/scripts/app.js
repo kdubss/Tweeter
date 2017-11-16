@@ -103,29 +103,35 @@ $( function () {
   loadTweet();
 
   function isValid(formData) {
-    if (formData.length === "" || formData.length === null) {
+    if(!formData) { 
+      alert('Must put something');
       return false;
-    } else if (formData.length === 140) {
-      alert("Your tweet can not be longer than 140 characters!");
+    } else if (formData.length > 140) {
+      alert('too long...')
       return false;
     } else {
       return true;
     }
+    // if(formData && formData.length > 0 && formData.length <= 140) {
+    //   return true
+    // }
   }
 
   $("form").submit(function(event) {
     event.preventDefault();
-    var formData = $(this).serialize();
 
-    if (!isValid(formData)) return;
+    var $tweet = $(this).find('textarea').val();
+
+    if (!isValid($tweet)) { 
+      return;
+    } 
+    
+    var formData = $(this).serialize();
 
     $.post('/tweets', formData)
       .success(loadTweet)
-      .error(err => alert(err));
-
-  });
-
-});
+  })
+})
 // var $tweet = createTweetElement(tweetData);
 
 // // Test / driver code (temporary)
