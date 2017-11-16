@@ -28,4 +28,6 @@ nav {
    position: relative;
    width: 160px;
    height: 75px;
+
+   margin-left: auto;
  }
