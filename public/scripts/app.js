@@ -9,7 +9,6 @@ $( function () {
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   }
-
   function createTweetElement(tweet) {
     // ...
     var tweetArticle = `<article class="tweet">
@@ -41,9 +40,7 @@ $( function () {
       $eachTweet = createTweetElement(tweet);
       $("#all-tweet-data").prepend($eachTweet);
     }
-    // $("#all-tweet-data").append($eachTweet);
   }
-    // renderTweet(tweetData);
 
   function loadTweet() {
     $.ajax({
@@ -67,22 +64,15 @@ $( function () {
     } else {
       return true;
     }
-    // if(formData && formData.length > 0 && formData.length <= 140) {
-    //   return true
-    // }
   }
 
   $("form").submit(function(event) {
     event.preventDefault();
-
     var $tweet = $(this).find('textarea').val();
-
     if (!isValid($tweet)) { 
       return;
     } 
-    
     var formData = $(this).serialize();
-
     $.post('/tweets', formData)
       .success(loadTweet)
   })
